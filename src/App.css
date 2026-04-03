@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+    * {
+        @apply font-sans ;
+    }
+    body {
+        @apply bg-black;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        @apply block font-bold; 
+    }
+    li {
+        @apply list-none;
+    }
+    
+}
