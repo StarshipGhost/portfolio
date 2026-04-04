@@ -13,7 +13,7 @@ const MobileHeader = ({open, closeMenu}: {open: boolean, closeMenu: () => void})
             <li className={clsx(itemClass)}onClick={closeMenu}><a>Tech Stack</a></li>
             <li className={clsx(itemClass)}onClick={closeMenu}><a>Projects</a></li>
             <li className={clsx(itemClass)}onClick={closeMenu}><a>Contacts</a></li>
-            <li className='text-white text-sm text-center font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 via-background to-purple-500 hover:to-purple-600 rounded-md p-2 cursor-pointer' onClick={closeMenu}><a>Resume</a></li>
+            <li className='text-white text-sm text-center font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 to-purple-500 hover:to-purple-600 rounded-md p-2 cursor-pointer' onClick={closeMenu}><a>Resume</a></li>
         </ul>
     )
 }
@@ -38,12 +38,12 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-1">
             <div className="flex justify-between items-center bg-black lg:px-[5vw] px-4 py-2 border-b border-solid border-cyan-900/70">
-                <BracketWrapper color='' className="text-xl lg:text-2xl font-bold bg-linear-to-r from-cyan-500 via-background to-purple-500 text-transparent bg-clip-text cursor-auto">
+                <BracketWrapper color='' className="text-xl lg:text-2xl font-bold bg-linear-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text cursor-auto">
                     {`Portfolio `}
                 </BracketWrapper>
                 <DesktopHeader/>
                 <MenuIcon open={openMenu} toggleMenu={() => setOpenMenu((v) => !v)}/>
-                <button className={'hidden lg:block text-white text-sm font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 via-background to-purple-500 hover:to-purple-600 px-4 py-1.5 rounded-md cursor-pointer'}>Resume</button>
+                <button className={'hidden lg:block text-white text-sm font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 to-purple-500 hover:to-purple-600 px-4 py-1.5 rounded-md cursor-pointer'}>Resume</button>
             </div>
             <MobileHeader open={openMenu} closeMenu={closeMenu}/>
         </header>
