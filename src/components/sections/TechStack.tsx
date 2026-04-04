@@ -5,12 +5,12 @@ interface ToolProps {
     name: string
 }
 
-interface TechStackCard {
+interface TechStackCardProps {
     layer: string,
     tools: ToolProps[]
 }
 
-const technologies : TechStackCard[] = [
+const technologies : TechStackCardProps[] = [
         {layer: 'Frontend', tools: [
             {img: 'https://cdn.simpleicons.org/react/61DAFB', name: 'React'},
             {img: 'https://cdn.simpleicons.org/typescript/3178C6', name: 'TypeScript'},
@@ -39,7 +39,7 @@ const Tool = ({img, name} : ToolProps) => {
     )
 }
 
-const TechStackCard = ({technology : {layer, tools}} : {technology: TechStackCard}) => {
+const TechStackCard = ({technology : {layer, tools}} : {technology: TechStackCardProps}) => {
     return (
         <div className="z-0 flex flex-col items-start gap-6 p-4 bg-black border border-solid border-cyan-900 hover:border-cyan-500 rounded-xl">
             <h3 className="text-xl text-white">{layer}</h3>
@@ -50,9 +50,9 @@ const TechStackCard = ({technology : {layer, tools}} : {technology: TechStackCar
     )
 }
 
-const TechStackCards = ({technologies} : {technologies: TechStackCard[]}) => {
+const TechStackCards = ({technologies} : {technologies: TechStackCardProps[]}) => {
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 mt-6">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
             { technologies.map((tech) => <TechStackCard technology={tech}/>) }
         </div>
     )
@@ -60,9 +60,9 @@ const TechStackCards = ({technologies} : {technologies: TechStackCard[]}) => {
 
 const TechStack = () => {
     return (
-        <section className="max-w-6xl mx-auto flex flex-col gap-6 items-center  px-4 py-20">
-            <BracketWrapper color={'text-cyan-500'} className="text-5xl text-white font-bold">Tech Stack</BracketWrapper>
-            <p className="text-neutral-400 text-lg tracking-wide">Technologies and tools I use to bring ideas to life</p>
+        <section className="max-w-7xl mx-auto flex flex-col gap-4 items-center px-4 py-20">
+            <BracketWrapper color={'text-cyan-500'} className="text-3xl lg:text-4xl text-white font-bold">Tech Stack</BracketWrapper>
+            <p className="text-neutral-400 text-lg tracking-wide text-center mb-8">Technologies and tools I use to bring ideas to life</p>
             <TechStackCards technologies={technologies}/>
         </section>
     )
