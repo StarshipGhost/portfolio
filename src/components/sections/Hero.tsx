@@ -7,11 +7,9 @@ import profile_picture from '../../assets/Portrait of a young man.png'
 const ProfilePicture = () => {
   return (
     <div className='flex justify-center items-center rounded-full order-1 lg:order-2'>
-        <div className="relative">
-            <div className='size-120'>
-                <div className="w-full h-full rounded-full bg-black p-2 overflow-hidden">
-                    <img src={profile_picture} className="w-full h-full rounded-full object-cover"></img>
-                </div>
+        <div className='size-64 sm:size-72 md:size-80 lg:size-120'>
+            <div className="w-full h-full rounded-full bg-black p-2">
+                <img src={profile_picture} className="w-full h-full rounded-full object-cover"></img>
             </div>
         </div>
     </div>
@@ -21,7 +19,7 @@ const ProfilePicture = () => {
 const Headline = () => {
     return (
         <div className="flex flex-col items-center lg:items-start order-2 lg:order-1">
-            <h1 className="text-5xl lg:text-6xl text-white mb-2 text-center lg:text-left"> Hi, I'm <span className="bg-linear-to-r from-cyan-500 via-background to-purple-500 text-transparent bg-clip-text"> Saâd Kalyati</span></h1>
+            <h1 className="text-5xl lg:text-6xl text-white mb-2 text-center lg:text-left"> Hi, I'm <span className="bg-linear-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text"> Saâd Kalyati</span></h1>
             <BracketWrapper color="text-cyan-500" className="text-2xl lg:text-3xl text-gray-300 text-center font-mono font-medium mb-6">
                 Software Engineering Student
             </BracketWrapper>
@@ -33,7 +31,7 @@ const Headline = () => {
                     <MailIcon/>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <button className="w-38 h-9 text-white text-sm font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 via-background to-purple-500 hover:to-purple-600 border border-solid border-cyan-900 rounded-lg whitespace-nowrap cursor-pointer">View My Work</button>
+                    <button className="w-38 h-9 text-white text-sm font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 to-purple-500 hover:to-purple-600 border border-solid border-cyan-900 rounded-lg whitespace-nowrap cursor-pointer">View My Work</button>
                     <button className="w-38 h-9 bg-black text-sm font-medium border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 rounded-lg cursor-pointer text-cyan-500 hover:text-white whitespace-nowrap">Get In Touch</button>
                 </div>
             </div>
@@ -43,12 +41,12 @@ const Headline = () => {
 
 const Hero = () => {
     return (
-        <div className="bg-linear-to-br from-cyan-400/10 via-background to-purple-400/10">
-            <div className="min-h-[90vh] max-w-6xl mx-auto relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-8 gap-y-10 px-4 py-20">
+        <section className="bg-linear-to-br from-cyan-400/10 to-purple-400/10">
+            <div className="min-h-[90vh] max-w-7xl mx-auto relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-8 gap-y-10 px-4 py-20">
                 <Headline/>
                 <ProfilePicture />
             </div>
-        </div>
+        </section>
     )
 }
 
