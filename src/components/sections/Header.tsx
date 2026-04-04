@@ -4,7 +4,7 @@ import MenuIcon from "../icons/MenuIcon";
 import clsx from "clsx";
 
 const MobileHeader = ({open, closeMenu}: {open: boolean, closeMenu: () => void}) => {
-    const baseClass : string = "lg:hidden w-full absolute z-1 bg-black flex flex-col p-4 transition -translate-y-full duration-300 delay-200"
+    const baseClass : string = "lg:hidden w-full absolute -z-1 bg-black flex flex-col p-4 transition -translate-y-full duration-300 delay-200"
     const activeClass : string = open ? 'translate-y-0' : '-translate-y-full'
     const itemClass : string = "text-sm text-neutral-400 font-medium hover:bg-cyan-900/30 p-3 rounded-md cursor-pointer";
     return (
@@ -36,8 +36,8 @@ const Header = () => {
         setOpenMenu(false);
     }
     return (
-        <header>
-            <div className="sticky z-2 flex justify-between items-center bg-black lg:px-[5vw] px-4 py-2 border-b border-solid border-cyan-900/70">
+        <header className="sticky top-0 z-1">
+            <div className="flex justify-between items-center bg-black lg:px-[5vw] px-4 py-2 border-b border-solid border-cyan-900/70">
                 <BracketWrapper color='' className="text-xl lg:text-2xl font-bold bg-linear-to-r from-cyan-500 via-background to-purple-500 text-transparent bg-clip-text cursor-auto">
                     {`Portfolio `}
                 </BracketWrapper>
