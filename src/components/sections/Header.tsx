@@ -43,7 +43,7 @@ const Header = ({scroll} : { scroll : (index: number) => void}) => {
     const toggleHover = () => {
         setHovered(!hovered);
     }
-    const popoverBaseClass = 'absolute w-35 bg-black opacity-0 transition duration-200 pointer-event-none cursor-default'
+    const popoverBaseClass = 'absolute w-35 flex flex-col bg-black opacity-0 transition duration-200 pointer-event-none cursor-default'
     const popoverActiveClass = hovered && 'opacity-100 pointer-event-auto cursor-pointer'
     return (
         <header className="sticky top-0 z-1">
@@ -55,10 +55,10 @@ const Header = ({scroll} : { scroll : (index: number) => void}) => {
                 <MenuIcon open={openMenu} toggleMenu={() => setOpenMenu((v) => !v)}/>
                 <div className="hidden lg:block">
                     <button onMouseEnter={() => setHovered(true)} onMouseLeave={toggleHover} className={' hidden relative lg:flex gap-2 items-center text-white text-sm font-medium bg-linear-to-r from-cyan-500 hover:from-cyan-600 to-purple-500 hover:to-purple-600 rounded-sm px-4 py-1.5 cursor-pointer'}> Resume <span className={ `size-0 border-l-5 border-r-5 border-t-5 border-solid border-l-transparent border-r-transparent border-t-white transition-transform duration-300 ${hovered && 'rotate-180'}` }></span></button>
-                    <ul className={ clsx(popoverBaseClass, popoverActiveClass) }>
-                        <li onMouseEnter={() => hovered && setHovered(true)} onMouseLeave={() => setHovered(false)} className={ `text-cyan-500 text-sm font-medium border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 ${hovered ? 'pointer-events-auto cursor-pointer' : 'pointer-events-none cursor-default'} p-4`}><a href="../../public/CV_Saâd_Kalyati_FR.pdf" target="_blank">French</a></li>
-                        <li onMouseEnter={() => hovered && setHovered(true)} onMouseLeave={() => setHovered(false)} className={ `text-cyan-500 text-sm font-medium border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 ${hovered ? 'pointer-events-auto cursor-pointer' : 'pointer-events-none cursor-default'} p-4` }><a href="../../public/CV_Saâd_Kalyati_EN.pdf" target="_blank">English</a></li>
-                    </ul>
+                    <div className={ clsx(popoverBaseClass, popoverActiveClass) }>
+                       <a className={ `text-cyan-500 text-sm font-medium border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 ${hovered ? 'block pointer-events-auto cursor-pointer' : 'hidden pointer-events-none cursor-default'} p-4`} onMouseEnter={() => hovered && setHovered(true)} onMouseLeave={() => setHovered(false)} href="../../public/CV_Saâd_Kalyati_FR.pdf" target="_blank">French</a>
+                       <a className={ `text-cyan-500 text-sm font-medium border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 ${hovered ? 'block pointer-events-auto cursor-pointer' : 'hidden pointer-events-none cursor-default'} p-4`} onMouseEnter={() => hovered && setHovered(true)} onMouseLeave={() => setHovered(false)} href="../../public/CV_Saâd_Kalyati_EN.pdf" target="_blank">English</a>
+                    </div>
                 </div>
             </div>
             <MobileHeader open={openMenu} closeMenu={closeMenu} scroll={scroll}/>
