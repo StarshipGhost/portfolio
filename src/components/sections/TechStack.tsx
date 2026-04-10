@@ -26,6 +26,9 @@ const technologies : TechStackCardProps[] = [
         ]},
         {layer: 'Tools & DevOps', tools: [
             {img: 'https://cdn.simpleicons.org/git/F05032', name: 'Git'},
+            {img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', name: 'VSCode'},
+            {img: 'https://cdn.simpleicons.org/apachemaven/C71A36', name: 'Maven'},
+            {img: 'https://cdn.simpleicons.org/jetbrains/000000', name: 'JetBrains'},
             {img: 'https://cdn.simpleicons.org/jest/C21325', name: 'Jest'}
         ]}
     ] 
