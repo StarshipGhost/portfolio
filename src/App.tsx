@@ -6,10 +6,9 @@ import Header from './components/sections/Header'
 import Hero from './components/sections/Hero'
 import Projects from './components/sections/Projects'
 import TechStack from './components/sections/TechStack'
-
+import Footer from './components/sections/Footer'
 
 function App() {
-
   const sectionRef = useRef<HTMLElement | null>(null);
   const scroll = (index: number) => {
     const sectionNode = sectionRef.current;  
@@ -26,11 +25,12 @@ function App() {
       <div className='fixed bottom-0 right-1/4 size-96 bg-purple-500/20 blur-3xl rounded-full animate-pulse pointer-events-auto'></div>
       <Header scroll={scroll}/> 
       <main ref={sectionRef}>
-        <Hero/>
+        <Hero scroll={(scroll)}/>
         <TechStack/>
         <Projects/>
         <Education/>
         <Contacts/>
+        <Footer/>
       </main>
     </div>
   )
