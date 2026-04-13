@@ -26,7 +26,7 @@ const projects : ProjectCardProp[] = [
         {
             name: 'Iris predictor web application',
             description: 'An introductory ML application centered on Iris flower classification. It showcases how to take a well-known dataset, train a model with Python tools such as scikit-learn, and wrap it in a simple app so users can test predictions interactively.',
-            liveDemo: "#", 
+            liveDemo: "https://starshipghost.github.io/iris-classification-app", 
             repo: "https://github.com/jalalk97/iris-classification-app/", 
             technologies: ['React', 'Typescript', 'Python', 'Fast API', 'scikit-learn', 'pandas', 'matplotlib'],
             img: project_2
