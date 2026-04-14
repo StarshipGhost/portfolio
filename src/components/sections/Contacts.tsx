@@ -87,7 +87,7 @@ const Contacts = () => {
     return (
         <section className="max-w-6xl mx-auto flex flex-col gap-4 items-center px-4 py-20">
             <BracketWrapper color={'text-purple-400'} className="text-3xl lg:text-4xl text-white text-center font-bold">Let's Work Together</BracketWrapper>
-            <p className="max-w-xl text-neutral-400 text-md lg:text-lg text-center mb-8">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <p className="max-w-xl text-neutral-400 text-sm lg:text-lg text-center mb-8">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <InfoCards/>
                 <MailFormCard/>

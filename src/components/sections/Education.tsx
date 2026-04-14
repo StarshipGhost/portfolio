@@ -63,7 +63,7 @@ const Education = () => {
         <section className='max-w-7xl mx-auto flex flex-col gap-4 items-center px-4 py-20'>
             <GraduationCapIcon/>
             <BracketWrapper color={'text-cyan-500'} className="text-3xl lg:text-4xl text-white text-center font-bold">Education</BracketWrapper>
-            <p className="max-w-xl text-neutral-400 text-md lg:text-lg tracking-wide text-center mb-8">My academic journey and qualifications</p>
+            <p className="max-w-xl text-neutral-400 text-sm lg:text-lg tracking-wide text-center mb-8">My academic journey and qualifications</p>
             <EducationCards education={education}/>
         </section>
     )
