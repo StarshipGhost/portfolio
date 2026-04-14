@@ -27,7 +27,7 @@ const Headline = ({scroll} : {scroll : (index: number) => void}) => {
                 Software Engineering Student
             </BracketWrapper>
             <div className="flex flex-col gap-4">
-            <p className="text-lg text-neutral-400 font-normal mb-2 text-center lg:text-left">Passionate about building elegant solutions to complex problems. I specialize in creating scalable web applications with modern technologies and best practices. </p>
+            <p className="text-md lg:text-lg text-neutral-400 font-normal mb-2 text-center lg:text-left">Passionate about building elegant solutions to complex problems. I specialize in creating scalable web applications with modern technologies and best practices. </p>
                 <div className="flex justify-center lg:justify-start gap-4 mb-6">
                     <a className="bg-black border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 p-2 rounded-md cursor-pointer text-cyan-500 hover:text-white" href="https://github.com/starshipghost" target="_blank"><GithubIcon/></a>
                     <a className="bg-black border border-box border-cyan-900 hover:border-cyan-500 hover:bg-cyan-500/10 p-2 rounded-md cursor-pointer text-cyan-500 hover:text-white" href="https://linkedin.com/in/saad-kalyati" target="_blank"><LinkedinIcon/></a>
@@ -46,7 +46,7 @@ const Headline = ({scroll} : {scroll : (index: number) => void}) => {
 const Hero = ({scroll} : {scroll : (index: number) => void}) => {
     return (
         <section className="bg-linear-to-br from-cyan-400/10 to-purple-400/10">
-            <div className="min-h-[90vh] max-w-7xl mx-auto relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-8 gap-y-10 px-4 py-20">
+            <div className="min-h-[90vh] max-w-7xl mx-auto relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-x-8 gap-y-10 px-4 py-16 lg:py-20">
                 <Headline scroll={scroll}/>
                 <ProfilePicture />
             </div>
