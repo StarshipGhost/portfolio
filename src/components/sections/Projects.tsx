@@ -16,11 +16,11 @@ interface ProjectCardProp {
 
 const projects : ProjectCardProp[] = [
         {
-            name: 'Hoops-league-registration-app',
+            name: 'Hoops-League registration app',
             description: 'A full-stack basketball game registration app. It allows users to view upcoming games, register for the next available event, and lets an admin manage the schedule and player registrations.',
             liveDemo: "http://starshipghost.github.io/hoops-league-registration-app", 
             repo: "http://github.com/starshipghost/hoops-league-registration-app/tree/main", 
-            technologies: ['React', 'Typescript', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
+            technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
             img: project_1 
         },
         {
@@ -28,7 +28,7 @@ const projects : ProjectCardProp[] = [
             description: 'An introductory ML application centered on Iris flower classification. It showcases how to take a well-known dataset, train a model with Python tools such as scikit-learn, and wrap it in a simple app so users can test predictions interactively.',
             liveDemo: "https://starshipghost.github.io/iris-classification-app", 
             repo: "https://github.com/jalalk97/iris-classification-app/", 
-            technologies: ['React', 'Typescript', 'Python', 'Fast API', 'scikit-learn', 'pandas', 'matplotlib'],
+            technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'scikit-learn', 'pandas', 'matplotlib'],
             img: project_2
         },
         {
@@ -36,7 +36,7 @@ const projects : ProjectCardProp[] = [
             description: 'A React and TypeScript web application that recreates part of the DofusDB experience. It extracts item and recipe data from the DofusDB API, transforms the raw responses into structured models, and displays information such as effects, conditions, descriptions, and recipe details through a clear game-data interface.',
             liveDemo: "https://starshipghost.github.io/dofus-book/", 
             repo: "https://github.com/StarshipGhost/dofus-book/", 
-            technologies: ['React', 'Typescript', 'CSS'],
+            technologies: ['React', 'TypeScript', 'CSS'],
             img: project_3
         },
 ] 
@@ -76,7 +76,7 @@ const Projects = () => {
     return (
         <section className="max-w-7xl mx-auto flex flex-col gap-4 items-center px-4 py-20">
             <BracketWrapper color={'text-purple-400'} className="text-3xl lg:text-4xl text-white text-center font-bold">Featured Projects</BracketWrapper>
-            <p className="max-w-xl text-neutral-400 text-md lg:text-lg text-center mb-8">A selection of projects I've worked on recently</p>
+            <p className="max-w-xl text-neutral-400 text-sm lg:text-lg text-center mb-8">A selection of projects I've worked on recently</p>
             <ProjectCards projects={projects}/>
         </section>
     )
