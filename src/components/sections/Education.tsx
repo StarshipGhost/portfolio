@@ -1,33 +1,8 @@
-import ets from '../../assets/ets.jpg';
-import college_rosemont from '../../assets/college_rosemont.png';
 import CalendarIcon from '../icons/CalendarIcon';
 import BracketWrapper from '../BracketWrapper';
 import GraduationCapIcon from '../icons/GraduationCapIcon';
+import { education, type EducationCardProps } from '@/constants/education';
 
-interface EducationCardProps {
-    icon: string,
-    school: string,
-    program: string,
-    specialization: string,
-    year: string,
-}
-
-const education : EducationCardProps[] = [
-        {
-            icon: ets,
-            school: 'École de Technologie Supérieure',
-            program: 'Bachelor in Software Engineering',
-            specialization: 'Specialized in Software Architecture and Web Development.',
-            year: '2023 - present'
-        },
-        {
-            icon: college_rosemont,
-            school: 'Cégep de Rosemont',
-            program: 'Computer Science and Mathematics',
-            specialization: 'Focus on Procedural Programming. Learn the basics and good coding practice. Deep dive in Object Oriented Programming and brief introduction to Data Structures & Algorithms.',
-            year: '2019 - 2022'
-        }
-    ]
 
 const EducationCard = ({education : {icon, school, program, specialization, year}} : {education: EducationCardProps}) => {
     return (

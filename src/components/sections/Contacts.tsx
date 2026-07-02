@@ -3,15 +3,8 @@ import BracketWrapper from "../BracketWrapper";
 import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import ClockIcon from "../icons/ClockIcon";
+import type { MailFormInputProps } from "@/types";
 
-interface MailFormInputProps {
-    id: string,
-    type: string,
-    label: string,
-    placeholder: string,
-    value: string,
-    onChangeHandler: (event : React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 const MailFormInput = ({id, type, label, placeholder, value, onChangeHandler} : MailFormInputProps) => {
     return (
