@@ -5,7 +5,7 @@ const BracketWrapper = ({children, color, className} : {children: string, color:
         <div className={className}>
             <span className={ clsx(color) }>{'<'}</span> 
             {children}
-            <span className={ clsx(color) }>{'/>'}</span>
+            <span className={ clsx(color) }>{' />'}</span>
         </div>
     ) 
 }
