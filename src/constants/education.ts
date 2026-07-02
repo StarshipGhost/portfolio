@@ -1,5 +1,5 @@
-import ets from '../../assets/ets.jpg'
-import college_rosemont from '../../assets/college_rosemont.png'
+import ets from './../assets/ets.jpg'
+import college_rosemont from './../assets/college_rosemont.png'
 import type {EducationCardProps} from '@/types'
 
 export const education: EducationCardProps[] = [

@@ -1,7 +1,7 @@
-import project_1 from '../../assets/hoops-league-registration-app.png'
-import project_2 from '../../assets/sorting-algorithm-visualizer-app.png'
-import project_3 from '../../assets/iris-predictor-web-app.png'
-import project_4 from '../../assets/dofus-book.png'
+import project_1 from './../assets/hoops-league-registration-app.png'
+import project_2 from './../assets/sorting-algorithm-visualizer-app.png'
+import project_3 from './../assets/iris-predictor-web-app.png'
+import project_4 from './../assets/dofus-book.png'
 import type {ProjectCardProp} from '@/types'
 
 export const projects: ProjectCardProp[] = [
