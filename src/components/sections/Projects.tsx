@@ -1,6 +1,7 @@
 import project_1 from '../../assets/hoops-league-registration-app.png';
-import project_2 from '../../assets/iris-predictor-web-app.png';
-import project_3 from '../../assets/dofus-book.png';
+import project_2 from '../../assets/sorting-algorithm-visualizer-app.png'
+import project_3 from '../../assets/iris-predictor-web-app.png';
+import project_4 from '../../assets/dofus-book.png';
 import BracketWrapper from '../BracketWrapper';
 import ExternalLinkIcon from '../icons/ExternalLinkIcon';
 import GithubIcon from '../icons/GithubIcon';
@@ -24,12 +25,20 @@ const projects : ProjectCardProp[] = [
             img: project_1 
         },
         {
+            name: 'Sorting algorithms visualizer',
+            description: 'An interactive web application that demonstrates sorting algorithms operate through smooth, step-by-step animations. Users can generate custom datasets, control playback, adjust animation speed, and inspect each algorithm\'s behavior in detail.',
+            liveDemo: "http://starshipghost.github.io/sorting-algorithms-visualizer-app", 
+            repo: "http://github.com/starshipghost/sorting-algorithms-visualizer-app/tree/main", 
+            technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+            img: project_2 
+        },
+        {
             name: 'Iris predictor web application',
             description: 'An introductory ML application centered on Iris flower classification. It showcases how to take a well-known dataset, train a model with Python tools such as scikit-learn, and wrap it in a simple app so users can test predictions interactively.',
             liveDemo: "https://starshipghost.github.io/iris-classification-app", 
             repo: "https://github.com/jalalk97/iris-classification-app/", 
             technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'scikit-learn', 'pandas', 'matplotlib'],
-            img: project_2
+            img: project_3
         },
         {
             name: 'Dofus book clone',
@@ -37,7 +46,7 @@ const projects : ProjectCardProp[] = [
             liveDemo: "https://starshipghost.github.io/dofus-book/", 
             repo: "https://github.com/StarshipGhost/dofus-book/", 
             technologies: ['React', 'TypeScript', 'CSS'],
-            img: project_3
+            img: project_4
         },
 ] 
 
@@ -47,11 +56,11 @@ const TechTag = ({name} : {name: string}) => {
 
 const ProjectCard = ({project : {name, description, liveDemo, repo, technologies, img}} : {project: ProjectCardProp}) => {
     return (
-        <div className='flex flex-col justify-between bg-black backdrop-blur-3xl border border-solid border-purple-500/30 hover:border-purple-400 rounded-xl'>
-            <img src={img} className='w-full border border-solid border-purple-500/30 hover:border-purple-400 rounded-tl-xl rounded-tr-xl'></img>
-            <div className="flex flex-col gap-4 p-4">
+        <div className='grid bg-black backdrop-blur-3xl border border-solid border-purple-500/30 hover:border-purple-400 rounded-xl'>
+            <img src={img} className='w-full h-full border border-solid border-purple-500/30 hover:border-purple-400 rounded-tl-xl rounded-tr-xl'></img>
+            <div className="flex flex-col justify-between gap-4 p-4">
                 <h2 className='text-white text-xl'>{name}</h2>
-                <p className=' text-sm text-neutral-400 overflow-y-auto'>{description}</p>
+                <p className='text-sm text-neutral-400 overflow-y-auto'>{description}</p>
                 <div className='flex flex-wrap gap-2'>
                     {technologies.map(tech => <TechTag key={tech} name={tech}/>)}
                 </div>
@@ -66,7 +75,7 @@ const ProjectCard = ({project : {name, description, liveDemo, repo, technologies
 
 const ProjectCards = ({projects} : {projects: ProjectCardProp[]}) => {
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 sm:grid-cols-2 gap-8">
             {projects.map(project => <ProjectCard key={project.name} project={project}/>)}
         </div>
     )
